@@ -49,7 +49,9 @@ Railway Hobby includes usage credit but is not a fixed-price unlimited hosting p
 
 Run starter:smoke against the new HTTPS domain. Verify /health/live, /health/ready, login rendering and anonymous private-route redirect. Create your first account securely using node ace user:create in the deployed runtime; no default account is supplied.
 
-On your designated staging environment, manually verify login, create/edit/delete behavior, cross-user denial and persistence after redeploy. Configure backups and rehearse restoring to an isolated database before storing important data. Save the tested commit, deployment result and any gaps in docs/setup-status.md. Do not publish credentials or private deployment logs.
+On your designated staging environment, manually verify login, create/complete/delete behavior, cross-user denial and persistence after redeploy. Configure backups and rehearse restoring to an isolated database before storing important data. Save the tested commit, deployment result and any gaps in docs/setup-status.md. Do not publish credentials or private deployment logs.
+
+The machine-readable companion is `deployment-blueprint.json`. It describes the desired environment for an agent; it is not a native Railway IaC file and is not automatically applied.
 
 ## What is actually reusable?
 
@@ -69,7 +71,7 @@ Railway supports reusable multi-service templates. A future published template s
 
 ## Agent choices and sources
 
-ChatGPT/Codex: use a supported coding environment with terminal access and authorized GitHub/Railway integration. Plan eligibility and usage limits can change; Plus alone does not install or authorize integrations. See https://developers.openai.com/codex/pricing and https://docs.railway.com/ai/plugins/chatgpt.
+ChatGPT/Codex: use a supported coding environment with terminal access and authorized GitHub/Railway integration. Plan eligibility and usage limits can change; Plus alone does not install or authorize integrations. See https://developers.openai.com/codex/pricing and https://docs.railway.com/ai/chatgpt-plugin.
 
 Hermes: an alternative agent harness, requiring its own installation, configured model/provider and tool access. Do not assume a ChatGPT subscription automatically covers arbitrary API calls or every Hermes provider. See https://hermes-agent.nousresearch.com/docs/integrations/providers/.
 
